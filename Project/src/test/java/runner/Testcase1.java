@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.util.Assert;
 
 import pages.homepage;
 import utils.base64;
@@ -27,6 +28,7 @@ public class Testcase1 extends Base {
     @Test(priority = 1)
     public void TC_001() throws IOException {
         driver.get(prop.getProperty("url"));
+        Assert.equals()
     }
 
 @BeforeMethod
