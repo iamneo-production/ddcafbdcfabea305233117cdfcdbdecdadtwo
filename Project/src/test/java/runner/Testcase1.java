@@ -32,7 +32,7 @@ public class Testcase1 extends Base {
 
         try {
 
-             Screenshot.getScreenShot(driver, "Login_test");
+         
 
             ExtentTest test = reporter.createTest("Basic log", "Execution for Login Function");
 
@@ -61,7 +61,7 @@ public class Testcase1 extends Base {
        
 
     }
-
+    }
     
 
 @BeforeMethod
