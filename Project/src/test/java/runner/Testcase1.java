@@ -34,7 +34,7 @@ public class Testcase1 extends Base {
 
          
 
-            ExtentTest test = reporter.createTest("Basic log", "Execution for Login Function");
+            ExtentTest test = reporter.createTest("TC_001", "Execution for Login Function");
 
             driver.get(prop.getProperty("url"));
        
