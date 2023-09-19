@@ -22,24 +22,35 @@ public class Testcase1 extends Base {
 
     java.util.logging.Logger log =  LoggerHandler.getLogger();
     base64 screenshotHandler = new base64();
-    ExtentReports reporter = Reporter.generateExtentReport();;
+    ExtentReports reporter = Reporter.generateExtentReport();
     homepage Homepage = new homepage();
     
     @Test(priority = 1)
-    try {
 
-        ExtentTest test = reporter.createTest("Basic log", "Execution for Login Function");
 
-    driver.get(prop.getProperty("url"));
-      test.log(Status.PASS,  "login Test");
+    public void TC_001() throws IOException {
 
-    }
+        try {
+
+             Screenshot.getScreenShot(driver, "Login_test");
+
+            ExtentTest test = reporter.createTest("Basic log", "Execution for Login Function");
+
+            driver.get(prop.getProperty("url"));
+       
+      
+
+            test.log(Status.PASS, "login Test");
+
+ 
+
+        }
 
     catch (Exception ex) {
 
         ex.printStackTrace();
 
-        Screenshot.getScreenShot(driver, "Login_test");
+        
 
         ExtentTest test = reporter.createTest("Login Test");
 
@@ -50,6 +61,8 @@ public class Testcase1 extends Base {
        
 
     }
+
+    
 
 @BeforeMethod
 public void beforeMethod() throws MalformedURLException {
